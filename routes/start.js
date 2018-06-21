@@ -2,12 +2,13 @@ var express = require('express');
 var router = express.Router();
 var schedule = require('node-schedule');
 var debug = require('debug')('untitled1:server');
+var discover = require('../lib/discover');
 // socket.io
 
 
 const {transports, createLogger, format} = require('winston');
 
-const frequency = '*/5 * * * * *';
+const frequency = '*/30 * * * * *';
 
 
 /*
@@ -31,12 +32,30 @@ const logger = createLogger({
     ]
 });
 
+/* Discover round
+ * This round runs every 10 minutes
+ * Contains scanningRound()
+ *  */
+async function discoverRound() {
+    require('dns').resolve('baidu.com', async function (err) {
+        if (err) {
+            logger.error('Cannot connect to Internet.');
+
+        } else {
+            // discover
+            var minerList = await discover.discoverMiners();
+            logger.debug(minerList)
+        }
+    });
+
+}
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('running', {title: 'FH-Monitor'});
     var j = schedule.scheduleJob(frequency, function(){
         logger.info('Starting new round');
+        discoverRound()
     });
 });
 
