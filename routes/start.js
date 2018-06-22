@@ -44,7 +44,9 @@ async function discoverRound() {
         } else {
             // discover
             var minerList = await discover.discoverMiners();
-            logger.debug(minerList)
+            logger.debug(minerList);
+            // Now should scan for each one
+            
         }
     });
 
