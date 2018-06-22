@@ -46,7 +46,7 @@ async function discoverRound() {
 
         } else {
             // TODO scheduler
-            var deviceList = await discover.discoverMiners();
+            var deviceList =  await discover.discoverMiners();
             // Store miners IP and Mac and Worker
             var minerList = {};
             logger.debug('Discover returnL\n' + deviceList);
