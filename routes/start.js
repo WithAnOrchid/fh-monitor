@@ -49,9 +49,9 @@ async function discoverRound() {
             var deviceList = await discover.discoverMiners();
             // Store miners IP and Mac and Worker
             var minerList = {};
-            logger.debug(deviceList);
+            logger.debug('Discover returnL\n' + deviceList);
             // Now should scan for each one
-            deviceList.forEach((miner) => {
+            await deviceList.forEach((miner) => {
                 var paredMiner = JSON.parse(miner);
                 var minerIP = paredMiner.ip;
                 scan.readStats(minerIP, minerPort, minerUser, minerPass, (err, stats) => {
@@ -60,7 +60,7 @@ async function discoverRound() {
                         logger.error('Cannot read stats from ' + minerIP);
                         // Modify the list of know devices
                     } else {
-                        logger.info("Successfully read stats from " + minerIP);
+                        logger.info('Successfully read stats from ' + minerIP);
                         logger.debug(stats);
                         var minerData = {
                             "ip": minerIP,
