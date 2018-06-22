@@ -49,7 +49,8 @@ async function discoverRound() {
             var deviceList =  await discover.discoverMiners();
             // Store miners IP and Mac and Worker
             var minerList = {};
-            logger.debug('Discover returnL\n' + deviceList);
+            logger.debug('Discover returned ' + deviceList);
+            console.log(deviceList);
             // Now should scan for each one
             deviceList.forEach((miner) => {
                 var parsedMiner = JSON.parse(miner);

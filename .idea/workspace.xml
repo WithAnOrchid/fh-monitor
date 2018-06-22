@@ -45,20 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/start.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+            <state relative-caret-position="600">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="discover.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="discover.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/discover.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="581">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -92,8 +92,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/get_miner_status.txt" />
         <option value="$PROJECT_DIR$/lib/scan.js" />
-        <option value="$PROJECT_DIR$/lib/discover.js" />
         <option value="$PROJECT_DIR$/routes/start.js" />
+        <option value="$PROJECT_DIR$/lib/discover.js" />
       </list>
     </option>
   </component>
@@ -203,7 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1529546814120</updated>
       <workItem from="1529546833844" duration="127000" />
-      <workItem from="1529547070383" duration="24826000" />
+      <workItem from="1529547070383" duration="26056000" />
     </task>
     <task id="LOCAL-00001" summary="Testing async discovering">
       <created>1529561440768</created>
@@ -254,11 +254,25 @@
       <option name="project" value="LOCAL" />
       <updated>1529647732738</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Try arpscan with promise">
+      <created>1529649240342</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1529649240342</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Try arpscan with promise">
+      <created>1529650158445</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1529650158445</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24953000" />
+    <option name="totallyTimeSpent" value="26183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
@@ -299,7 +313,8 @@
     <MESSAGE value="Build device list and scan for miners, put miners stats in miner list" />
     <MESSAGE value="Spam some &quot;await&quot;" />
     <MESSAGE value="Remove async and await from discoverMiners()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove async and await from discoverMiners()" />
+    <MESSAGE value="Try arpscan with promise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try arpscan with promise" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/views/error.pug">
@@ -373,13 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/discover.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/scan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -389,8 +397,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/start.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        <state relative-caret-position="600">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/discover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
         </state>
       </provider>
     </entry>
