@@ -52,8 +52,8 @@ async function discoverRound() {
             logger.debug('Discover returnL\n' + deviceList);
             // Now should scan for each one
             await deviceList.forEach((miner) => {
-                var paredMiner = JSON.parse(miner);
-                var minerIP = paredMiner.ip;
+                var parsedMiner = JSON.parse(miner);
+                var minerIP = parsedMiner.ip;
                 scan.readStats(minerIP, minerPort, minerUser, minerPass, (err, stats) => {
                     if(err){
                         // Maybe not an Antminer
@@ -64,9 +64,9 @@ async function discoverRound() {
                         logger.debug(stats);
                         var minerData = {
                             "ip": minerIP,
-                            "mac": paredMiner.mac,
+                            "mac": parsedMiner.mac,
                             "worker": JSON.parse(stats),
-                            "last_seen" : paredMiner.timestamp
+                            "last_seen" : parsedMiner.timestamp
                         };
                         minerList.push(minerData);
                         logger.debug('Miner list:\n' + minerList);
