@@ -3,13 +3,16 @@ var router = express.Router();
 var schedule = require('node-schedule');
 var debug = require('debug')('untitled1:server');
 var discover = require('../lib/discover');
+var scan = require('../lib/scan');
 // socket.io
 
 
 const {transports, createLogger, format} = require('winston');
 
 const frequency = '*/30 * * * * *';
-
+const minerPort = 80;
+const minerUser = 'root';
+const minerPass = 'root';
 
 /*
     Logging
@@ -42,11 +45,34 @@ async function discoverRound() {
             logger.error('Cannot connect to Internet.');
 
         } else {
-            // discover
-            var minerList = await discover.discoverMiners();
-            logger.debug(minerList);
+            // TODO scheduler
+            var deviceList = await discover.discoverMiners();
+            // Store miners IP and Mac and Worker
+            var minerList = {};
+            logger.debug(deviceList);
             // Now should scan for each one
-
+            deviceList.forEach((miner) => {
+                var paredMiner = JSON.parse(miner);
+                var minerIP = paredMiner.ip;
+                scan.readStats(minerIP, minerPort, minerUser, minerPass, (err, stats) => {
+                    if(err){
+                        // Maybe not an Antminer
+                        logger.error('Cannot read stats from ' + minerIP);
+                        // Modify the list of know devices
+                    } else {
+                        logger.info("Successfully read stats from " + minerIP);
+                        logger.debug(stats);
+                        var minerData = {
+                            "ip": minerIP,
+                            "mac": paredMiner.mac,
+                            "worker": JSON.parse(stats),
+                            "last_seen" : paredMiner.timestamp
+                        };
+                        minerList.push(minerData);
+                        logger.debug('Miner list:\n' + minerList);
+                    }
+                })
+            })
         }
     });
 
@@ -55,7 +81,7 @@ async function discoverRound() {
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('running', {title: 'FH-Monitor'});
-    var j = schedule.scheduleJob(frequency, function(){
+    var discoverRoundScheduler = schedule.scheduleJob(frequency, function(){
         logger.info('Starting new round');
         discoverRound()
     });
