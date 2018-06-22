@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aae1ca5f-a79d-4cfb-ba28-478396f60dc2" name="Default" comment="Add await to to read">
+    <list default="true" id="aae1ca5f-a79d-4cfb-ba28-478396f60dc2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/discover.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/discover.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/start.js" afterDir="false" />
@@ -36,15 +36,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/start.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="scan.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/scan.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -54,11 +45,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="start.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/start.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="discover.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/discover.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            <state relative-caret-position="173">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -203,7 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1529546814120</updated>
       <workItem from="1529546833844" duration="127000" />
-      <workItem from="1529547070383" duration="22985000" />
+      <workItem from="1529547070383" duration="24826000" />
     </task>
     <task id="LOCAL-00001" summary="Testing async discovering">
       <created>1529561440768</created>
@@ -240,11 +240,25 @@
       <option name="project" value="LOCAL" />
       <updated>1529646081410</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Spam some &quot;await&quot;">
+      <created>1529647429612</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1529647429612</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Remove async and await from discoverMiners()">
+      <created>1529647732738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529647732738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23112000" />
+    <option name="totallyTimeSpent" value="24953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
@@ -283,7 +297,9 @@
     <MESSAGE value="Add scanner for miners" />
     <MESSAGE value="Change interface from wlan0 to eth0" />
     <MESSAGE value="Build device list and scan for miners, put miners stats in miner list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build device list and scan for miners, put miners stats in miner list" />
+    <MESSAGE value="Spam some &quot;await&quot;" />
+    <MESSAGE value="Remove async and await from discoverMiners()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove async and await from discoverMiners()" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/views/error.pug">
@@ -359,8 +375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/discover.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state relative-caret-position="173">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -373,8 +389,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/start.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+        <state relative-caret-position="471">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
         </state>
       </provider>
     </entry>
