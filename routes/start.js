@@ -46,12 +46,21 @@ async function discoverRound() {
 
         } else {
             // TODO scheduler
-            var deviceList =  await discover.discoverMiners();
+            var discoverPromises =  await discover.discoverMiners();
+            var str =  JSON.stringify(discoverPromises);
+            var deviceList = JSON.parse(str);
             // Store miners IP and Mac and Worker
             var minerList = {};
-            logger.debug('Discover returned ' + deviceList);
+            logger.debug('Discover returned ' + deviceList.toString());
             console.log(deviceList);
+
             // Now should scan for each one
+            for(var i = 0; i < deviceList.length; i++){
+                console.log(deviceList[i])
+            }
+
+            ////
+/*
             deviceList.forEach((miner) => {
                 var parsedMiner = JSON.parse(miner);
                 var minerIP = parsedMiner.ip;
@@ -74,6 +83,8 @@ async function discoverRound() {
                     }
                 })
             })
+*/
+            ////
         }
     });
 
