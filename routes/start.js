@@ -52,11 +52,12 @@ async function discoverRound() {
             // Store miners IP and Mac and Worker
             var minerList = {};
             logger.debug('Discover returned ' + deviceList.toString());
-            console.log(deviceList);
 
             // Now should scan for each one
             for(var i = 0; i < deviceList.length; i++){
-                console.log(deviceList[i])
+                var parsedMiner = JSON.parse(deviceList[i]);
+                var minerIP = parsedMiner.ip;
+                console.log(parsedMiner)
             }
 
             ////
