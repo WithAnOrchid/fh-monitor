@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aae1ca5f-a79d-4cfb-ba28-478396f60dc2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/iot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/discover.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/discover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scan.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scan.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/start.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,20 +22,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="start.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/start.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
+            <state relative-caret-position="677">
+              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="discover.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/discover.js">
+      <file leaf-file-name="iot.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/iot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="29" column="31" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="768">
+              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -40,8 +43,8 @@
       <file leaf-file-name="scan.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/scan.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="72">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -74,9 +77,10 @@
         <option value="$PROJECT_DIR$/lib/scanner.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/get_miner_status.txt" />
-        <option value="$PROJECT_DIR$/lib/scan.js" />
         <option value="$PROJECT_DIR$/lib/discover.js" />
+        <option value="$PROJECT_DIR$/lib/scan.js" />
         <option value="$PROJECT_DIR$/routes/start.js" />
+        <option value="$PROJECT_DIR$/lib/iot.js" />
       </list>
     </option>
   </component>
@@ -96,7 +100,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
@@ -107,6 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,31 +119,10 @@
               <item name="fh-monitor" type="b2602c69:ProjectViewProjectNode" />
               <item name="fh-monitor" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="fh-monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fh-monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fh-monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fh-monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fh-monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fh-monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fh-monitor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fh-monitor" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -148,6 +132,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
@@ -181,6 +166,7 @@
       <workItem from="1529546833844" duration="127000" />
       <workItem from="1529547070383" duration="26056000" />
       <workItem from="1530135109889" duration="1365000" />
+      <workItem from="1530159974478" duration="12276000" />
     </task>
     <task id="LOCAL-00001" summary="Testing async discovering">
       <created>1529561440768</created>
@@ -245,25 +231,31 @@
       <option name="project" value="LOCAL" />
       <updated>1529650158445</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Replace forEach() with regular for loop">
+      <created>1530163007771</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1530163007771</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32042000" />
+    <option name="totallyTimeSpent" value="44318000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13953489" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1839172" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25630915" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25630915" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32848486" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3533123" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -291,16 +283,10 @@
     <MESSAGE value="Spam some &quot;await&quot;" />
     <MESSAGE value="Remove async and await from discoverMiners()" />
     <MESSAGE value="Try arpscan with promise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try arpscan with promise" />
+    <MESSAGE value="Replace forEach() with regular for loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace forEach() with regular for loop" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/scan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -395,9 +381,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debug.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/debug.log" />
     <entry file="file://$PROJECT_DIR$/lib/discover.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -560,24 +544,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/scan.js">
+    <entry file="file://$PROJECT_DIR$/lib/discover.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="312">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/discover.js">
+    <entry file="file://$PROJECT_DIR$/lib/scan.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="29" column="31" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/start.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
+        <state relative-caret-position="677">
+          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/iot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
         </state>
       </provider>
     </entry>

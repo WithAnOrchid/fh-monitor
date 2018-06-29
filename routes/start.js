@@ -46,45 +46,83 @@ async function discoverRound() {
 
         } else {
             // TODO scheduler
-            var discoverPromises =  await discover.discoverMiners();
-            var str =  JSON.stringify(discoverPromises);
-            var deviceList = JSON.parse(str);
+            //var discoverPromises =  discover.discoverMiners();
+            //var str =  JSON.stringify(discoverPromises);
+            //var deviceList = JSON.parse(str);
             // Store miners IP and Mac and Worker
-            var minerList = {};
-            logger.debug('Discover returned ' + deviceList.toString());
+            //var minerList = {};
 
-            // Now should scan for each one
-            for(var i = 0; i < deviceList.length; i++){
-                var parsedMiner = JSON.parse(deviceList[i]);
-                var minerIP = parsedMiner.ip;
-                console.log(parsedMiner)
-            }
 
-            ////
-/*
-            deviceList.forEach((miner) => {
-                var parsedMiner = JSON.parse(miner);
-                var minerIP = parsedMiner.ip;
-                scan.readStats(minerIP, minerPort, minerUser, minerPass, (err, stats) => {
-                    if(err){
-                        // Maybe not an Antminer
-                        logger.error('Cannot read stats from ' + minerIP);
-                        // Modify the list of know devices
-                    } else {
-                        logger.info('Successfully read stats from ' + minerIP);
-                        logger.debug(stats);
-                        var minerData = {
-                            "ip": minerIP,
-                            "mac": parsedMiner.mac,
-                            "worker": JSON.parse(stats),
-                            "last_seen" : parsedMiner.timestamp
-                        };
-                        minerList.push(minerData);
-                        logger.debug('Miner list:\n' + minerList);
-                    }
-                })
-            })
-*/
+            await discover.discoverMiners( function(res) {
+                var addresses =  JSON.stringify(res);
+                var deviceList =  JSON.parse(addresses);
+                var minerList = [];
+                //console.log(deviceList);
+                console.log(deviceList.length);
+                for(var i = 0; i < deviceList.length; i++){
+                    var parsedMiner = deviceList[i];
+                    console.log(parsedMiner);
+                    var minerIP = parsedMiner.ip;
+
+                    scan.readStats(minerIP, minerPort, minerUser, minerPass, (err, stats) => {
+                        if(err){
+                            // Maybe not an Antminer
+                            logger.error('Cannot read stats from ' + minerIP);
+                            // Modify the list of know devices
+                        } else {
+                            logger.info('Successfully read stats from ' + minerIP);
+                            //logger.debug(stats);
+                            var minerData = {
+                                "ip": minerIP,
+                                "mac": parsedMiner.mac,
+                                "worker": stats,
+                                "last_seen" : parsedMiner.timestamp
+                            };
+                            minerList.push(minerData);
+                            logger.debug('Miner list: ' + minerList.length);
+                        }
+                    })
+                }
+                console.log(minerList);
+            });
+
+
+
+
+            //logger.debug('Discover returned ' + deviceList.toString());
+            /*
+                        // Now should scan for each one
+                        for(var i = 0; i < deviceList.length; i++){
+                            var parsedMiner = JSON.parse(deviceList[i]);
+                            var minerIP = parsedMiner.ip;
+                            console.log(parsedMiner)
+                        }
+
+                        ////
+
+                        deviceList.forEach((miner) => {
+                            var parsedMiner = JSON.parse(miner);
+                            var minerIP = parsedMiner.ip;
+                            scan.readStats(minerIP, minerPort, minerUser, minerPass, (err, stats) => {
+                                if(err){
+                                    // Maybe not an Antminer
+                                    logger.error('Cannot read stats from ' + minerIP);
+                                    // Modify the list of know devices
+                                } else {
+                                    logger.info('Successfully read stats from ' + minerIP);
+                                    logger.debug(stats);
+                                    var minerData = {
+                                        "ip": minerIP,
+                                        "mac": parsedMiner.mac,
+                                        "worker": JSON.parse(stats),
+                                        "last_seen" : parsedMiner.timestamp
+                                    };
+                                    minerList.push(minerData);
+                                    logger.debug('Miner list:\n' + minerList);
+                                }
+                            })
+                        })
+            */
             ////
         }
     });
