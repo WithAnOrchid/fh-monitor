@@ -79,6 +79,7 @@ async function discoverRound() {
                                 "last_seen" : parsedMiner.timestamp
                             };
                             minerList.push(minerData);
+                            logger.debug('Miner Data: ' + minerData);
                             logger.debug('Miner list: ' + minerList.length);
                         }
                     })

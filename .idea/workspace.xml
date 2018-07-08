@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aae1ca5f-a79d-4cfb-ba28-478396f60dc2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/iot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/root-CA.crt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/discover.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/discover.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scan.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/scan.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/iot.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/iot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/start.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,29 +19,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="start.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="start.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/start.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+            <state relative-caret-position="869">
+              <caret line="81" column="67" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iot.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="debug.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/debug.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="1055">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iot.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/iot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scan.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/scan.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="360">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -62,6 +59,7 @@
     <findStrings>
       <find>create</find>
       <find>http</find>
+      <find>worker</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,8 +77,9 @@
         <option value="$PROJECT_DIR$/test/get_miner_status.txt" />
         <option value="$PROJECT_DIR$/lib/discover.js" />
         <option value="$PROJECT_DIR$/lib/scan.js" />
-        <option value="$PROJECT_DIR$/routes/start.js" />
         <option value="$PROJECT_DIR$/lib/iot.js" />
+        <option value="$PROJECT_DIR$/root-CA.crt" />
+        <option value="$PROJECT_DIR$/routes/start.js" />
       </list>
     </option>
   </component>
@@ -111,7 +110,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,6 +121,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,6 +136,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tony\WebstormProjects\fh-monitor" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tony\WebstormProjects\fh-monitor\views" />
     </key>
@@ -153,6 +155,18 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Node.js.iot.js">
+    <configuration name="iot.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="iot.js" working-dir="$PROJECT_DIR$/lib" />
+    <list>
+      <item itemvalue="Node.js.bin\www" />
+      <item itemvalue="Node.js.iot.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.iot.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -166,7 +180,8 @@
       <workItem from="1529546833844" duration="127000" />
       <workItem from="1529547070383" duration="26056000" />
       <workItem from="1530135109889" duration="1365000" />
-      <workItem from="1530159974478" duration="12276000" />
+      <workItem from="1530159974478" duration="16716000" />
+      <workItem from="1531087900023" duration="775000" />
     </task>
     <task id="LOCAL-00001" summary="Testing async discovering">
       <created>1529561440768</created>
@@ -238,26 +253,34 @@
       <option name="project" value="LOCAL" />
       <updated>1530163007771</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Tested discovering and scanning, to be integrated with AWS IoT">
+      <created>1530252253966</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1530252253966</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44318000" />
+    <option name="totallyTimeSpent" value="49533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1839172" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25630915" />
-      <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25630915" />
+      <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3533123" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -284,23 +307,10 @@
     <MESSAGE value="Remove async and await from discoverMiners()" />
     <MESSAGE value="Try arpscan with promise" />
     <MESSAGE value="Replace forEach() with regular for loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace forEach() with regular for loop" />
+    <MESSAGE value="Tested discovering and scanning, to be integrated with AWS IoT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tested discovering and scanning, to be integrated with AWS IoT" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/discover.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -483,7 +493,6 @@
     <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/debug.log" />
     <entry file="file://$PROJECT_DIR$/combined.log" />
     <entry file="file://$PROJECT_DIR$/views/index.pug">
       <provider selected="true" editor-type-id="text-editor">
@@ -530,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/get_miner_status.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="869">
-          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-77">
@@ -551,6 +553,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/get_miner_status.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2616">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/root-CA.crt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/scan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -558,17 +574,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/start.js">
+    <entry file="file://$PROJECT_DIR$/start.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
+        <state relative-caret-position="144">
+          <caret line="6" column="136" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/iot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        <state relative-caret-position="360">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debug.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="1055">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="869">
+          <caret line="81" column="67" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
         </state>
       </provider>
     </entry>
