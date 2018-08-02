@@ -4,8 +4,8 @@ var schedule = require('node-schedule');
 var debug = require('debug')('untitled1:server');
 var discover = require('../lib/discover');
 var scan = require('../lib/scan');
-//var iot = require('../lib/iot.js');
-// socket.io
+var iot = require('../lib/iot.js');
+
 
 
 const {transports, createLogger, format} = require('winston');
@@ -42,6 +42,9 @@ const logger = createLogger({
     ]
 });
 
+
+// TODO NEW
+iot.initIoT();
 
 /* Discover round
  * This round runs every 10 minutes
@@ -85,15 +88,16 @@ async function discoverRound() {
                         } else {
                             // todo July 15
 
-                            logger.info('Successfully read stats from ' + '');
+                            //logger.info('Successfully read stats from ' + '');
                             //logger.debug(stats);
 
 
                             minerList.push(resList);
                             logger.debug('Miner list length: ' + minerList.length);
                             logger.debug(resList[0]);
-                            logger.debug("******");
-                            logger.debug(resList[1]);
+                            iot.publish(resList[1])
+                            //logger.debug("******");
+                            //logger.debug(resList[1]);
                         }
                     })
                 }
