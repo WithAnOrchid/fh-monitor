@@ -58,7 +58,7 @@ async function discoverRound() {
 
         } else {
             // TODO scheduler
-            var scanningRound = schedule.scheduleJob(discoveryFrequency, function(){
+            var scanningRound = schedule.scheduleJob(scanningFrequency, function(){
                 logger.info('***Starting Scanning Round***');
 
                 discover.discoverMiners( async function (res) {
