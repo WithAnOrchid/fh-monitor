@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # stop script on error
 set -e
 
