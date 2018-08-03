@@ -10,7 +10,7 @@ var iot = require('../lib/iot.js');
 
 const {transports, createLogger, format} = require('winston');
 
-const discoveryFrequency = '* */5 * * * *';
+const discoveryFrequency = '*/30 * * * * *';
 const scanningFrequency = '*/30 * * * * *';
 const minerPort = 80;
 const minerUser = 'root';
@@ -58,7 +58,7 @@ async function discoverRound() {
 
         } else {
             // TODO scheduler
-            var scanningRound = schedule.scheduleJob(scanningFrequency, function(){
+
                 logger.info('***Starting Scanning Round***');
 
                 discover.discoverMiners( async function (res) {
@@ -98,7 +98,6 @@ async function discoverRound() {
                     })
                 }
 
-            });
             });
 
         }
