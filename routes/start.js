@@ -10,7 +10,8 @@ var iot = require('../lib/iot.js');
 
 const {transports, createLogger, format} = require('winston');
 
-const discoveryFrequency = '*/30 * * * * *';
+//const discoveryFrequency = '*/30 * * * * *';
+const discoveryFrequency = '*/1 * * * *';
 const scanningFrequency = '*/30 * * * * *';
 const minerPort = 80;
 const minerUser = 'root';
@@ -88,15 +89,17 @@ async function discoverRound() {
                             //logger.info('Successfully read stats from ' + '');
                             //logger.debug(stats);
 
-                            minerList.push(resList);
+                            minerList.push(resList[0]);
+
                             logger.debug('Miner list length: ' + minerList.length);
                             logger.debug(resList[0]);
-                            iot.publish(resList[1])
-                            //logger.debug("******");
-                            //logger.debug(resList[1]);
+                            iot.publish(resList[1]);
+                            logger.debug("******");
+                            logger.debug(resList[1]);
                         }
                     })
                 }
+                iot.publishTo('list', minerList);
 
             });
 
