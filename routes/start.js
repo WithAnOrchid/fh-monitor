@@ -95,11 +95,12 @@ async function discoverRound() {
                             logger.debug(resList[0]);
                             iot.publish(resList[1]);
                             logger.debug("******");
-                            logger.debug(resList[1]);
+                            //logger.debug(resList[1]);
+                            iot.publishTo('list', JSON.stringify(minerList));
                         }
                     })
                 }
-                iot.publishTo('list', minerList);
+                //iot.publishTo('list', minerList);
 
             });
 
@@ -113,7 +114,7 @@ router.get('/', function (req, res, next) {
     res.render('running', {title: 'FH-Monitor'});
     var discoverRoundScheduler = schedule.scheduleJob(discoveryFrequency, function(){
         logger.info('***Starting Discover Round***');
-        discoverRound()
+        discoverRound();
     });
 });
 
