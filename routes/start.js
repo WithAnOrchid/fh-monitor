@@ -17,12 +17,6 @@ const minerPort = 80;
 const minerUser = 'root';
 const minerPass = 'root';
 
-//const keyPath = '../shuikou_dev.private.key';
-//const certPath= '../shuikou_dev.cert.pem';
-//const caPath= '../root-CA.crt';
-//const clientId= 'shuikou';
-//const host= 'a26ktsy790d3lc.iot.ap-southeast-1.amazonaws.com';
-
 /*
     Logging
 */
@@ -84,7 +78,6 @@ async function discoverRound() {
 
                             // Modify the list of know devices
                         } else {
-                            // todo July 15
 
                             //logger.info('Successfully read stats from ' + '');
                             //logger.debug(stats);
@@ -93,10 +86,10 @@ async function discoverRound() {
 
                             logger.debug('Miner list length: ' + minerList.length);
                             logger.debug(resList[0]);
-                            iot.publish(resList[1]);
+                            iot.publishMinerDetails(resList[1]);
                             logger.debug("******");
                             //logger.debug(resList[1]);
-                            iot.publishTo('list', JSON.stringify(minerList));
+                            iot.publishGeneralInfo(JSON.stringify(minerList));
                         }
                     })
                 }
