@@ -81,12 +81,13 @@ async function discoverRound() {
                             // Modify the list of know devices
                         } else {
                             counter++;
+                            if(resList[1].length > 2){
+                                minerList.push(resList[0]);
 
-                            minerList.push(resList[0]);
-
-                            logger.debug('Miner list length: ' + minerList.length);
-                            logger.debug(resList[0]);
-                            iot.publishMinerDetails(resList[1]);
+                                logger.debug('Miner list length: ' + minerList.length);
+                                logger.debug(resList[0]);
+                                iot.publishMinerDetails(resList[1]);
+                            }
 
                             //logger.debug(resList[1]);
 
