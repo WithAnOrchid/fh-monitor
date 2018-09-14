@@ -7,11 +7,10 @@ var scan = require('../lib/scan');
 var iot = require('../lib/iot.js');
 
 
-
 const {transports, createLogger, format} = require('winston');
 
 //const discoveryFrequency = '*/30 * * * * *';
-const discoveryFrequency = '*/1 * * * *';
+const discoveryFrequency = '*/5 * * * *';
 const scanningFrequency = '*/30 * * * * *';
 const minerPort = 80;
 const minerUser = 'root';
@@ -54,15 +53,17 @@ async function discoverRound() {
         } else {
             // TODO scheduler
 
-                logger.info('***Starting Scanning Round***');
+            logger.info('***Starting Scanning Round***');
 
-                discover.discoverMiners( async function (res) {
+            discover.discoverMiners( async function (res) {
                 var addresses = JSON.stringify(res);
                 var deviceList = JSON.parse(addresses);
                 logger.debug('Device list: ' + addresses);
                 var minerList = [];
                 //console.log(deviceList);
                 //console.log(deviceList.length);
+
+                var counter = 0;
                 for (var i = 0; i < deviceList.length; i++) {
 
                     var parsedMiner = deviceList[i];
@@ -75,25 +76,31 @@ async function discoverRound() {
                         if (err) {
                             // Maybe not an Antminer
                             logger.error('Cannot read miner stats: ' + err);
+                            counter++;
 
                             // Modify the list of know devices
                         } else {
-
-                            //logger.info('Successfully read stats from ' + '');
-                            //logger.debug(stats);
+                            counter++;
 
                             minerList.push(resList[0]);
 
                             logger.debug('Miner list length: ' + minerList.length);
                             logger.debug(resList[0]);
                             iot.publishMinerDetails(resList[1]);
-                            logger.debug("******");
+
                             //logger.debug(resList[1]);
-                            iot.publishGeneralInfo(JSON.stringify(minerList));
+
+
+                            if(counter === deviceList.length-1){
+                                logger.debug('List should be complete');
+                                logger.debug('Final list length: ' + minerList.length);
+                                iot.publishGeneralInfo(JSON.stringify(minerList));
+                            }
                         }
                     })
                 }
-                //iot.publishTo('list', minerList);
+
+
 
             });
 
