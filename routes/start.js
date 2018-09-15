@@ -81,7 +81,7 @@ async function discoverRound() {
                             // Modify the list of know devices
                         } else {
                             counter++;
-                            if(resList[1].length > 2){
+                            if(resList !== undefined){
                                 minerList.push(resList[0]);
 
                                 logger.debug('Miner list length: ' + minerList.length);
