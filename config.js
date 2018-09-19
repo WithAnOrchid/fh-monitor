@@ -2,6 +2,11 @@ const farmLocation = 'guyi';
 
 const config = {
     debug: true,
+    miner:{
+        minerPort: 80,
+        minerUser: 'root',
+        minerPass: 'root'
+    },
     farm: {
         farmLocation: farmLocation,
         farmAdmin: 'liudi@dr.com',
