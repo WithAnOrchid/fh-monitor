@@ -21,7 +21,8 @@ const config = {
         generalInfoPublishTo: farmLocation + '/generalinfo',
         minerDetailsPublishTo: farmLocation + '/minerdetails',
         controlSubscribeTo: farmLocation + '/controlsignal',
-        controlPublishTo: farmLocation + '/controlfeedback'
+        controlPublishTo: farmLocation + '/controlfeedback',
+        scheduledPublishTo: 'fh/' + farmLocation + '/minerdetails'
     }
 };
 module.exports = config;

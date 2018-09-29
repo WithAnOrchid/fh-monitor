@@ -44,7 +44,7 @@ router.get('/', function (req, res, next) {
     res.render('running', {title: 'FH-Monitor'});
     var discoverRoundScheduler = schedule.scheduleJob(discoveryFrequency, function(){
         logger.info('***Starting Discover Round***');
-        hub.discoverRound();
+        hub.discoverRound('scheduler');
     });
 });
 
