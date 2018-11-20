@@ -1,4 +1,5 @@
 const farmLocation = 'guyi';
+//const farmLocation = 'shuikou';
 
 const config = {
     debug: true,
@@ -13,7 +14,7 @@ const config = {
         totalMiners: 30
     },
     iot: {
-        host: 'a26ktsy790d3lc.iot.ap-southeast-1.amazonaws.com',
+        host: 'a26ktsy790d3lc-ats.iot.ap-south-1.amazonaws.com',
         caPath: './cert/root-CA.crt',
         keyPath: './cert/' + farmLocation + '_dev.private.key',
         certPath: './cert/' + farmLocation + '_dev.cert.pem',
